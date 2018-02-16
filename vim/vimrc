@@ -1,0 +1,63 @@
+" ----------------------------------------------------------------------------
+" Plugins
+" ----------------------------------------------------------------------------
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'fatih/vim-go'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'scrooloose/syntastic'
+" Initialize plugin system
+call plug#end()
+
+let g:go_version_warning = 0
+
+" ----------------------------------------------------------------------------
+let mapleader=','
+set noswapfile
+
+" Theme & display
+filetype on
+syntax enable
+colorscheme Tomorrow-Night
+set lines=35 columns=150
+set colorcolumn=80
+set number
+
+
+" Source .vimrc
+map <leader>s :source $MYVIMRC<CR>
+
+" ----------------------------------------------------------------------------
+"  Splits Navigation
+" ----------------------------------------------------------------------------
+"splits
+nnoremap <Leader>l <C-w>v<C-w>l
+nnoremap <Leader>j <C-w>s<C-w>j
+"Navigation between splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+"Resize splits when the window is resized
+au VimResized * exe "normal! \<C-w>="
+
+" ---------------------------------------------------------------------------
+" UI
+" ---------------------------------------------------------------------------
+"set ruler		" show cursor position
+set ignorecase 		" ignore case in search 
+set visualbell		" shut up the bell
+set showmatch              " Show matching brackets/braces
+set mat=5                  " duration to show matching brace (1/10 sec)
+map <leader>f :FZF<CR>
+set backspace=indent,eol,start
+
+" ---------------------------------------------------------------------------
+" Strip all trailing whitespace in file
+" ---------------------------------------------------------------------------
+function! StripWhitespace ()
+    exec ':%s/ \+$//g'
+endfunction   
+map <leader>rtw :call StripWhitespace ()<CR>

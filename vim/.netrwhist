@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/trevorsmith/go/src/github.com/sendgrid/stargate/internal/dal'
+let g:netrw_dirhist_2='/Users/trevorsmith/.aws'
+let g:netrw_dirhist_3='/Users/trevorsmith/dev/sendgrid/chef-stargate/test/integration/nodes'
+let g:netrw_dirhist_4='/Users/trevorsmith/go/src/github.com/sendgrid/email_deduper/vendor/github.com/moovweb/gokogiri/help'
+let g:netrw_dirhist_5='/Users/trevorsmith/go/src/github.com/sendgrid/ipvettingd/.git'
+let g:netrw_dirhist_6='/Users/trevorsmith/.aws'

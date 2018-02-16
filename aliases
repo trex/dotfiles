@@ -1,0 +1,4 @@
+alias l="ls -la"
+alias gosg="cd ~/go/src/github.com/sendgrid/"
+alias clay="cd go/src/github.com/sendgrid/cl_aai_test"
+alias agv="ag --ignore-dir vendor"
